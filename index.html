@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops example</title>
+</head>
+<body>
+    <h2>Loops</h2>
+    <div id="output"></div>
+
+
+    <script>
+        const out = document.getElementById("output");
+         const end = document.getElementById("endline")
+        for (let i = 1; i <=5; i++) {
+            out.innerHTML += "for loop: "+ i +"<br>";
+        }
+        //  end.innerHTML += "END OF LOOP";
+
+        let j = 1;
+        while(j <= 5) {
+            out.innerHTML += "while loop:"  + j + "<br>";
+            j++;
+        }
+        let k = 6;
+        do {
+out.innerHTML += "do...whileloop: " + k + "<br>";
+k++;
+        }  while (k <= 5);
+
+        let colors = ["red", "green", "blue"];
+        for (let color of colors) {
+            out.innerHTML += "for...of loop: " + color + "<br>";
+        }
+        
+        let person = { name: "john", age: 22, city: "ilorin"};
+        for (let key in person) {
+           
+    out.innerHTML += "for...in loop: " + person[key] + "<br>";
+        }
+        // <!-- "write a program that:"
+
+// prints number 1-10
+// keeps asking for input until the user types 'stop'
+// asks once for password, and repeat until its correct.
+//looops through an array of fruits and prints them
+// loops through an object describing yourself (name, school, hobby) and prints each property" --->
+
+for (let y = 0; y <=10; y++){
+   out.innerHTML+= + y + "<br/>";
+}
+   
+
+
+let i;
+while (i!== 'stop' ){
+    i = prompt ("Enter text ( 'stop' to quit):");
+    console.log("stoppped");
+    } 
+
+    let password = 1234
+    do {
+        let input = prompt ("Enter  the password")
+        out += " welcome, password is correct"
+    } while (password == input);
+
+
+
+
+let fruits = ["apple", "coconut", "orange"];
+for (let fruits of fruits) {
+    out.innerHTML += "for...of loop" + fruit + "<br>";
+}
+
+
+let guy = {name: "riff", school: "AATU", hobby: "gooning" };
+for (let key in guy ) {
+    out.innerHTML += "for... in loop: " + guy[key] + "<br>";
+}
+
+    </script>
+</body>
+</html>
+
+
